@@ -37,6 +37,7 @@ namespace WebMarket.Web.Controllers
             {//check if client entered data
                 _db.Categories.Add(obj);
                 _db.SaveChanges();
+                TempData["success"] = "دسته ی جدید با موفقیت ایجاد شد";
                 return RedirectToAction("Index");//return to the list of categories
             }
             return View(obj);
@@ -74,6 +75,7 @@ namespace WebMarket.Web.Controllers
             {//check if client entered data
                 _db.Categories.Update(obj);//update is EF Core default method
                 _db.SaveChanges();
+                TempData["success"] = "دسته با موفقیت ویرایش شد";
                 return RedirectToAction("Index");//return to the list of categories
             }
             return View(obj);
@@ -106,6 +108,7 @@ namespace WebMarket.Web.Controllers
             var obj = _db.Categories.Find(id);
             _db.Categories.Remove(obj);//remove is EF Core default method
             _db.SaveChanges();
+            TempData["success"] = "دسته با موفقیت حذف شد";
             return RedirectToAction("Index");//return to the list of categories
         }
     }

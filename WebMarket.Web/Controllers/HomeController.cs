@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
-using WebMarket.Web.Models;
+using WebMarket.Models;
 
 namespace WebMarket.Web.Controllers
 {

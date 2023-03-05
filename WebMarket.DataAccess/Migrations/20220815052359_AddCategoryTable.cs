@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
-namespace WebMarket.Web.Migrations
+namespace WebMarket.DataAccess.Migrations
 {
     public partial class AddCategoryTable : Migration
     {
